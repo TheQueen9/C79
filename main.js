@@ -1,19 +1,20 @@
-student_array=[]
-
-function Submit(){
-    name1=document.getElementById('student1').value
-    name2=document.getElementById('student2').value
-    name3=document.getElementById('student3').value
-    name4=document.getElementById('student4').value
-
-    student_array.push(name1)
-    student_array.push(name2)
-    student_array.push(name3)
-    student_array.push(name4)
-
-    document.getElementById('output').innerHTML=student_array
-
-}
-function Sorting(){
-    document.getElementById('output').innerHTML=student_array.sort()
+var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+var names = ["Fmaily Book","Ratan Nandrajog", "Mandar Dandekar", "Rishabh Dandekar", "Trisha Dandekar", "Prachie Dandekar"];
+var i = 0;
+function update()
+{
+    i++;
+    var numbers_of_family_member_in_array = 5
+    if(i > numbers_of_family_member_in_array)
+      {
+          i = 0;
+      }
+    
+    //Debug the code to store list of images in updatedImage. Use images[i]
+    var updatedImage = images[i];
+    //Debug the code to store list of names in updatedName. Use names[i]
+    var updatedName = names[i] ;
+ 
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
 }
